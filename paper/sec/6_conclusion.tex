@@ -1,0 +1,7 @@
+\section{Conclusion}
+
+This project compared a Random Forest classifier and a Multi-Layer Perceptron on the Adult income prediction task using a shared preprocessing and evaluation pipeline. The central finding is that model choice changes the type of errors made, not just the headline score. Random Forest achieved higher Accuracy, Precision, and ROC-AUC, while MLP achieved higher Recall and F1-score. In addition, MLP was much faster to train and infer with, used far less memory, and produced a much smaller model file.
+
+For this dataset, MLP is the better overall recommendation if the goal is a compact and efficient classifier that still captures a reasonable share of the positive class. Random Forest remains the stronger option when conservative positive predictions and easier model inspection are more important than footprint. In other words, the better model depends on whether the application penalises false positives or missed positives more heavily.
+
+The main limitations of this study are the restricted hyperparameter search space and the fact that only two model families were compared. In addition, the analysis stays at the level of aggregate predictive performance, so it does not address fairness, calibration, or subgroup-specific behaviour. Natural next steps would therefore include broader tuning, stronger tabular baselines such as gradient boosting, and a more explicit analysis of demographic disparities in model errors.

@@ -1,0 +1,12 @@
+\section{Experimental Setup}
+\label{sec:experimental_setup}
+
+All experiments use the same stratified train/validation/test split with proportions 70\%/15\%/15\% and random seed 42, resulting in 34,189 training examples, 7,326 validation examples, and 7,327 test examples. The validation set is used for model selection, while the test set is reserved for the final comparison only. This design avoids data leakage and ensures that both methods are evaluated under identical conditions.
+
+The implementation uses Python 3.12.7, \texttt{scikit-learn}, and a Windows 11 environment. The machine reports 31.82 GB of RAM. Model selection is based on validation F1-score, which is appropriate for this task because the Adult dataset is not perfectly balanced and F1-score captures the trade-off between precision and recall. The final reported performance metrics are Accuracy, Precision, Recall, F1-score, and ROC-AUC.
+
+To keep the comparison fair, both methods use the same data split, the same cleaned inputs, and the same validation-driven model-selection rule. We do not apply class re-weighting or task-specific threshold tuning for only one method, because that would confound the comparison. Early stopping is enabled for the MLP to reduce overfitting, while the Random Forest is controlled through the depth and leaf-size search grid. This setup does not make the models identical in capacity, but it does ensure that each model is evaluated under a consistent and defensible protocol.
+
+To complement predictive performance, we also measure practical efficiency. The code records training time, approximate memory growth during training, average inference time per sample, and the size of the serialized model file. These measurements are useful for discussing engineering trade-offs between the two approaches, especially because the assignment requires critical comparison rather than metric reporting alone.
+
+For reproducibility, the repository provides fixed hyperparameter grids, deterministic data splits, and an evaluation script that automatically exports CSV, Markdown, and \LaTeX{} tables. The processor was reported by Python as Intel64 Family 6 Model 183 Stepping 1 on an AMD64 machine profile.

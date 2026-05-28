@@ -1,0 +1,9 @@
+\section{Introduction}
+
+Income prediction is a practical classification problem with applications in labour economics, policy analysis, and benefit targeting. It is also a useful machine learning benchmark because errors do not all have the same implication: a model that predicts too many people as high-income behaves very differently from one that misses too many true high-income cases. That makes the task suitable for comparing not only overall accuracy, but also the type of mistakes made by different models.
+
+In this project, we study the Adult income dataset from the UCI Machine Learning Repository~\cite{kohavi1996adult,uciadult}. Our objective is to determine whether a Random Forest classifier~\cite{breiman2001randomforest} or a Multi-Layer Perceptron (MLP)~\cite{rumelhart1986backprop,goodfellow2016deep} is better suited to predicting whether an individual's income exceeds \$50K. This is a meaningful comparison because the dataset is structured and mixed-type, which often suits tree ensembles, but it is still large enough to test whether a neural network can learn competitive decision boundaries after careful preprocessing.
+
+Our study focuses on three practical questions. First, can the task be framed in a clean and reproducible pipeline from data preparation to final evaluation? Second, how differently do a tree ensemble and a neural network behave when trained on the same structured dataset? Third, do their computational costs tell a different story from their predictive scores? These questions shape the comparison carried out in the rest of the paper.
+
+The rest of the paper is organised as follows. Section~\ref{sec:problem_setting} defines the task and dataset. Section~\ref{sec:methodology} presents the compared models. Section~\ref{sec:experimental_setup} describes the experimental protocol, and Section~\ref{sec:results} discusses the quantitative findings.

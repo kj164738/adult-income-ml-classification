@@ -1,0 +1,10 @@
+\section{Problem Setting}
+\label{sec:problem_setting}
+
+We address a supervised binary classification problem. Let $\mathbf{x} \in \mathcal{X}$ denote a structured feature vector describing one individual, and let $y \in \{0,1\}$ denote the income label, where $1$ corresponds to annual income greater than \$50K and $0$ otherwise. The goal is to learn a classifier $f(\mathbf{x})$ that predicts the income class for unseen examples.
+
+The Adult dataset contains 48,842 rows with 14 predictive features and one binary income label~\cite{uciadult}. Among the 14 features, 6 are numeric and 8 are categorical. The class distribution is moderately imbalanced: 11,687 positive examples ($>$50K) and 37,155 negative examples ($\leq$50K). The features include age, work class, education, occupation, relationship, sex, capital gain, capital loss, and hours worked per week. This makes the dataset a realistic tabular classification benchmark with mixed data types and non-trivial decision boundaries.
+
+The preprocessing strategy follows the assessment brief. Missing values represented by ``?'' are treated as unavailable observations. Numeric features are imputed with the median, categorical features are imputed with the most frequent category, and categorical variables are transformed through one-hot encoding. Standardization is applied only for the MLP because neural networks are more sensitive to feature scale, whereas tree-based models are generally insensitive to monotonic feature scaling. No target information from the validation or test split is used during preprocessing, which helps avoid data leakage.
+
+This setting is appropriate for the assignment because it uses a public dataset, a clearly defined objective, and a task where both performance and computational trade-offs can be analysed rigorously.
