@@ -1,0 +1,6 @@
+{
+  "best_model_by_test_f1": "MLP",
+  "results_table_path": "C:\\Users\\windows11\\Desktop\\\u673a\u5668\u5b66\u4e60\\JC3509_Assessment\\outputs\\tables\\main_results_table.csv",
+  "complexity_table_path": "C:\\Users\\windows11\\Desktop\\\u673a\u5668\u5b66\u4e60\\JC3509_Assessment\\outputs\\tables\\complexity_table.csv",
+  "roc_curve_path": "C:\\Users\\windows11\\Desktop\\\u673a\u5668\u5b66\u4e60\\JC3509_Assessment\\outputs\\figures\\roc_curve.pdf"
+}

@@ -1,0 +1,41 @@
+{
+  "model_name": "Random Forest",
+  "data_source": "openml:adult-v2",
+  "smoke_test": false,
+  "target_label_positive": ">50K",
+  "dataset_summary": {
+    "num_rows": 48842,
+    "num_features": 14,
+    "num_numeric_features": 6,
+    "num_categorical_features": 8,
+    "positive_examples": 11687,
+    "negative_examples": 37155
+  },
+  "best_params": {
+    "n_estimators": 500,
+    "max_depth": 20,
+    "min_samples_leaf": 1
+  },
+  "selection_metric": "validation_f1",
+  "validation_metrics": {
+    "accuracy": 0.8704613704613705,
+    "precision": 0.8008982035928144,
+    "recall": 0.6103822019395322,
+    "f1": 0.6927808352217546,
+    "roc_auc": 0.9204088267233357
+  },
+  "test_metrics": {
+    "accuracy": 0.862153678176607,
+    "precision": 0.781226343679031,
+    "recall": 0.5887050770108385,
+    "f1": 0.6714378659726741,
+    "roc_auc": 0.9140685781164322
+  },
+  "complexity": {
+    "train_time_seconds": 9.585946800012607,
+    "memory_delta_mb": 175.79296875,
+    "avg_inference_seconds": 0.32656348000018626,
+    "inference_ms_per_sample": 0.04456987580185427,
+    "model_size_mb": 170.70534801483154
+  }
+}

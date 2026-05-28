@@ -1,0 +1,44 @@
+{
+  "model_name": "MLP",
+  "data_source": "openml:adult-v2",
+  "smoke_test": false,
+  "target_label_positive": ">50K",
+  "dataset_summary": {
+    "num_rows": 48842,
+    "num_features": 14,
+    "num_numeric_features": 6,
+    "num_categorical_features": 8,
+    "positive_examples": 11687,
+    "negative_examples": 37155
+  },
+  "best_params": {
+    "hidden_layer_sizes": [
+      128,
+      64
+    ],
+    "alpha": 0.001,
+    "learning_rate_init": 0.001
+  },
+  "selection_metric": "validation_f1",
+  "validation_metrics": {
+    "accuracy": 0.8633633633633634,
+    "precision": 0.7480211081794196,
+    "recall": 0.6468910439247005,
+    "f1": 0.6937901498929336,
+    "roc_auc": 0.9166010967433338
+  },
+  "test_metrics": {
+    "accuracy": 0.8565579363996179,
+    "precision": 0.7346256684491979,
+    "recall": 0.6269252709640616,
+    "f1": 0.6765158510310865,
+    "roc_auc": 0.9086977043403579
+  },
+  "complexity": {
+    "train_time_seconds": 2.889266199999838,
+    "memory_delta_mb": 0.9765625,
+    "avg_inference_seconds": 0.014017614999465878,
+    "inference_ms_per_sample": 0.0019131452162502902,
+    "model_size_mb": 0.5150241851806641
+  }
+}
